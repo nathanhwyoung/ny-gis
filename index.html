@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathan Young - GIS & Spatial Analysis</title>
+    <meta
+      name="description"
+      content="Portfolio of Nathan Young, GIS analyst in Portland, Oregon. Spatial analysis, ArcGIS Pro, web mapping, and Python."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Subtle topographic contour texture behind the hero */
+      .contours {
+        background-image:
+          repeating-radial-gradient(
+            circle at 30% 40%,
+            transparent 0,
+            transparent 38px,
+            rgba(21, 42, 74, 0.07) 39px,
+            transparent 40px
+          ),
+          repeating-radial-gradient(
+            circle at 78% 65%,
+            transparent 0,
+            transparent 46px,
+            rgba(198, 106, 52, 0.05) 47px,
+            transparent 48px
+          );
+      }
+    </style>
+  </head>
+  <body class="bg-paper text-ink font-sans antialiased">
+    <!-- Nav -->
+    <header class="sticky top-0 z-20 bg-navy/90 backdrop-blur border-b border-white/10">
+      <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#top" class="font-mono text-sm tracking-tight font-semibold text-paper"
+          >nathan young</a
+        >
+        <div class="hidden sm:flex items-center gap-7 text-sm text-mist">
+          <a href="#work" class="hover:text-clay transition-colors">Work</a>
+          <a href="#contact" class="hover:text-clay transition-colors">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="contours">
+      <div class="max-w-5xl mx-auto px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
+        <p class="font-mono text-xs sm:text-sm text-clay tracking-widest uppercase mb-5">
+          GIS &middot; Spatial Analysis &middot; Portland, OR
+        </p>
+        <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight leading-[1.05] max-w-3xl">
+          I map rivers reopening, oaks counted, birds resting.
+        </h1>
+        <p class="mt-6 text-lg text-moss max-w-2xl leading-relaxed">
+          I'm a GIS analyst with nine years of professional web development behind me. I build
+          spatial datasets with documented schemas, run the analysis, and publish the results as
+          maps and dashboards you can open in a browser.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a
+            href="#work"
+            class="inline-flex items-center rounded-md bg-ink text-paper px-5 py-2.5 text-sm font-medium hover:bg-moss transition-colors"
+          >
+            See the work
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center rounded-md border border-moss/40 text-ink px-5 py-2.5 text-sm font-medium hover:border-clay hover:text-clay transition-colors"
+          >
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="bg-navy text-mist">
+      <div class="max-w-5xl mx-auto px-6 py-16 sm:py-24">
+        <div class="flex items-end justify-between mb-12">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-paper">
+            Selected work
+          </h2>
+          <span class="font-mono text-xs text-sage hidden sm:block">2026</span>
+        </div>
+
+        <div class="grid gap-8">
+          <!-- Project 1: Dam Removal -->
+          <article
+            class="group grid sm:grid-cols-[1fr_2fr] gap-6 rounded-xl border border-emerald-900/20 bg-spruce p-6 sm:p-8 hover:border-sage transition-colors"
+          >
+            <div>
+              <span class="font-mono text-xs text-clay">01 &middot; Analysis + Web GIS</span>
+              <h3 class="mt-2 text-xl font-semibold tracking-tight text-ink">
+                Oregon Dam Removal Tracker
+              </h3>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs font-mono text-moss">
+                <span class="bg-ink/10 rounded px-2 py-0.5">ArcGIS Pro</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">AGOL</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">Python</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-moss leading-relaxed">
+                This project involved compiling a statewide geodatabase of 95 dam removals in
+                (mostly) Oregon from federal and NGO sources (American Rivers, NID, NOAA), and
+                publishing a hosted feature layer with an interactive Web Map and Dashboard. I
+                joined the dam locations to NHDPlus flowlines and traced upstream to estimate that
+                the dam removals reopened roughly
+                <strong class="text-ink">1,750 river miles of fish habitat</strong>. I used spatial
+                joins to StreamNet, ODFW, and NOAA/USFWS critical habitat layers to identify the
+                endangered species affected by each dam removal. The layer follows a 24-field schema
+                with a data dictionary that records the source, method, and fill rate for every
+                attribute.
+              </p>
+              <a
+                href="https://www.arcgis.com/apps/dashboards/4c05babd6600471e84ae47ba33d6f642"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                Open the dashboard
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a
+                href="https://www.arcgis.com/home/item.html?id=4c05babd6600471e84ae47ba33d6f642"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 ml-6 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                View in AGOL
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: White Oak -->
+          <article
+            class="group grid sm:grid-cols-[1fr_2fr] gap-6 rounded-xl border border-slate-700/20 bg-basalt p-6 sm:p-8 hover:border-sage transition-colors"
+          >
+            <div>
+              <span class="font-mono text-xs text-clay">02 &middot; Field Data Collection</span>
+              <h3 class="mt-2 text-xl font-semibold tracking-tight text-ink">
+                Oregon White Oak Survey
+              </h3>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs font-mono text-moss">
+                <span class="bg-ink/10 rounded px-2 py-0.5">Field Maps</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">ArcGIS Pro</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">AGOL</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-moss leading-relaxed">
+                A mobile field-data-collection tool for surveying individual Oregon white oak (<em
+                  >Quercus garryana</em
+                >): tree condition, conifer encroachment, restoration priority, etc. The form uses
+                attribute domains, conditional form logic, required fields, and photo attachments,
+                with a schema modeled on Washington Department of Fish and Wildlife and BLM Salem
+                District oak-woodland protocols.
+              </p>
+              <a
+                href="https://fieldmaps.arcgis.app/?itemID=cf1b29396087469a84931c3d585d33dd&amp;referenceContext=open&amp;anonymousAccess=true"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                Open in Field Maps
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a
+                href="https://www.arcgis.com/home/item.html?id=cf1b29396087469a84931c3d585d33dd"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 ml-6 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                View in AGOL
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <p class="mt-2 text-xs text-moss/80">
+                The Field Maps link opens the survey in the ArcGIS Field Maps mobile app.
+              </p>
+            </div>
+          </article>
+
+          <!-- Project 4: Osprey -->
+          <article
+            class="group grid sm:grid-cols-[1fr_2fr] gap-6 rounded-xl border border-emerald-900/20 bg-spruce p-6 sm:p-8 hover:border-sage transition-colors"
+          >
+            <div>
+              <span class="font-mono text-xs text-clay">03 &middot; Data Science / Python</span>
+              <h3 class="mt-2 text-xl font-semibold tracking-tight text-ink">
+                Osprey Migration Rest Stops
+              </h3>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs font-mono text-moss">
+                <span class="bg-ink/10 rounded px-2 py-0.5">pandas</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">scikit-learn</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">DBSCAN</span>
+                <span class="bg-ink/10 rounded px-2 py-0.5">ArcGIS Pro</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-moss leading-relaxed">
+                Where do osprey (<em>Pandion haliaetus</em>) stop to rest during their migration?
+                These locations are important for conservationists to protect, in addition to the
+                species' summer and winter locations. Even though
+                <a
+                  href="https://bioone.org/journals/journal-of-raptor-research/volume-48/issue-4/JRR-14-00035.1/The-Spring-Migration-of-Adult-North-American-Ospreys/10.3356/JRR-14-00035.1.full"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-clay hover:underline"
+                  >this study</a
+                >
+                was intended for a different purpose, I wanted to see if I could use the data from
+                it to detect these locations. I wrote a Python script that uses
+                <a
+                  href="https://ecosystems.psu.edu/research/labs/walter-lab/manual/movement-methods/3-6-net-squared-displacement-1"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-clay hover:underline"
+                  >Net Squared Displacement</a
+                >
+                to flag stationary segments and clusters them with
+                <a
+                  href="https://en.wikipedia.org/wiki/DBSCAN"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-clay hover:underline"
+                  >DBSCAN</a
+                >
+                to find shared stopovers. It identified
+                <strong class="text-ink">78 stopovers, 24 of them shared</strong>.
+              </p>
+              <a
+                href="https://github.com/nathanhwyoung/osprey_migration_rest_stops/blob/main/osprey_rest_stops_poster.jpg"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                View the poster
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a
+                href="https://github.com/nathanhwyoung/osprey_migration_rest_stops"
+                target="_blank"
+                rel="noopener"
+                class="mt-4 ml-6 inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline"
+              >
+                View the repo
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-fog">
+      <div class="max-w-5xl mx-auto px-6 py-16 sm:py-24 text-center">
+        <p class="mt-4 text-moss text-lg max-w-xl mx-auto">
+          Open to GIS analyst and spatial-data roles in the Portland area and remote.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium">
+          <a
+            href="mailto:nathanhwyoung@gmail.com"
+            class="text-ink hover:text-clay transition-colors"
+            >nathanhwyoung@gmail.com</a
+          >
+          <a
+            href="https://linkedin.com/in/nathanhwyoung"
+            target="_blank"
+            rel="noopener"
+            class="text-ink hover:text-clay transition-colors"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/nathanhwyoung"
+            target="_blank"
+            rel="noopener"
+            class="text-ink hover:text-clay transition-colors"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-fog">
+      <div
+        class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-sage font-mono"
+      >
+        <span>Nathan Young &middot; Portland, Oregon</span>
+        <span>Built with Tailwind</span>
+      </div>
+    </footer>
+  </body>
+</html>

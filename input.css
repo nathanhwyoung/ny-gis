@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #17212e;
+  --color-moss: #3d4757;
+  --color-sage: #7c8798;
+  --color-clay: #c66a34;
+  --color-paper: #f4f1ea;
+  --color-fog: #e3e1d9;
+  --color-navy: #152a4a;
+  --color-navy2: #1f3b64;
+  --color-spruce: #d0ecda;
+  --color-basalt: #d5e1f3;
+  --color-mist: #c9d4e3;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
